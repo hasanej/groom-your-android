@@ -24,11 +24,11 @@ import android.widget.ImageView;
 
 import java.util.List;
 
-public class MasterListAdapter extends BaseAdapter {
+public class BodyPartAdapter extends BaseAdapter {
     private Context mContext;
     private List<Integer> mImageIds;
 
-    public MasterListAdapter(Context context, List<Integer> imageIds) {
+    public BodyPartAdapter(Context context, List<Integer> imageIds) {
         mContext = context;
         mImageIds = imageIds;
     }

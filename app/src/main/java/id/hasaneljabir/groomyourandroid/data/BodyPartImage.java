@@ -21,7 +21,7 @@ import java.util.List;
 
 import id.hasaneljabir.groomyourandroid.R;
 
-public class AndroidImageAssets {
+public class BodyPartImage {
     private static final List<Integer> heads = new ArrayList<Integer>() {{
         add(R.drawable.head1);
         add(R.drawable.head2);
