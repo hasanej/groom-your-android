@@ -29,6 +29,7 @@ import java.util.List;
 import id.hasaneljabir.groomyourandroid.R;
 
 public class BodyPartFragment extends Fragment {
+
     private static final String TAG = "BodyPartFragment";
     private List<Integer> mImageIds;
     private int mListIndex;
@@ -39,10 +40,25 @@ public class BodyPartFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_body_part, container, false);
-        ImageView imageView = (ImageView) rootView.findViewById(R.id.body_part_image_view);
+        final ImageView imageView = rootView.findViewById(R.id.body_part_image_view);
 
         if (mImageIds != null) {
             imageView.setImageResource(mImageIds.get(mListIndex));
+
+            imageView.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            if (mListIndex < mImageIds.size() - 1) {
+                                mListIndex++;
+                            } else {
+                                mListIndex = 0;
+                            }
+
+                            imageView.setImageResource(mImageIds.get(mListIndex));
+                        }
+                    }
+            );
         } else {
             Log.v(TAG, "This fragment has a null list of image id's");
         }
