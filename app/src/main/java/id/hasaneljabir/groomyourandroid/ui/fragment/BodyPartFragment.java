@@ -68,7 +68,7 @@ public class BodyPartFragment extends Fragment {
                     }
             );
         } else {
-            Log.v(TAG, "This fragment has a null list of image id's");
+            Log.v(TAG, "Image ID is null");
         }
 
         return rootView;

@@ -25,6 +25,7 @@ import android.widget.ImageView;
 import java.util.List;
 
 public class BodyPartAdapter extends BaseAdapter {
+
     private Context mContext;
     private List<Integer> mImageIds;
 
@@ -50,6 +51,7 @@ public class BodyPartAdapter extends BaseAdapter {
 
     public View getView(final int position, View convertView, ViewGroup parent) {
         ImageView imageView;
+
         if (convertView == null) {
             imageView = new ImageView(mContext);
             imageView.setAdjustViewBounds(true);
